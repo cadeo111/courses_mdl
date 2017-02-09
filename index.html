@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <meta name="description" content="A cool thing made with Gomix">
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Courses</span>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Options</span>
+        <nav class="mdl-navigation">
+            <div class="box sliders">
+                <div class="mdl-slider_title trimesters">
+                    All
+                </div>
+                <input class="mdl-slider mdl-js-slider trimesters" type="range"
+                       min="0" max="3" value="0" tabindex="0">
+                <div class="mdl-slider_title grade-level">
+                    5<sup>th</sup>-12<sup>th</sup>
+                </div>
+                <input class="mdl-slider mdl-js-slider grade-level" type="range"
+                       min="0" max="3" value="2" tabindex="0">
+            </div>
+
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+
+        </div>
+    </main>
+</div>
+</body>
+</html>
