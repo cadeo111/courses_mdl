@@ -1,0 +1,143 @@
+@import "material";
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+div.mdl-slider_title {
+  padding: 0 20px;
+  margin: 0 auto;
+  min-height: 25px;
+
+  .title {
+    margin: 0;
+  }
+}
+
+div.mdl-radio_container {
+  margin: 0 auto;
+  padding: 5px 20px;
+}
+
+div.box {
+
+}
+
+div.banner {
+  min-height: 50px;
+  @extend .mdl-layout__header;
+  background: #d84a51;
+  a {
+    text-decoration: none;
+    color: white;
+    height: 50px;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    & * {
+      color: white
+    }
+    &:hover {
+      background: rgb(255, 82, 93);
+    }
+  }
+}
+
+dialog.desc {
+  width: 60vw;
+  min-height: 60vh;
+  max-height: 100vh;
+  button {
+    position: absolute;
+    right: 14px;
+  }
+}
+
+.mdl-card {
+  padding-bottom: 50px;
+  margin: 0 5px;
+  margin-bottom: 10px;
+  padding-top: 50px;
+  width: 275px;
+  & :focus{
+    outline: none;
+  };
+  .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+  .mdl-chip__contact{
+    margin: 0;
+  }
+  .extended {
+    width: 50px;
+  }
+  hr {
+    margin: 0 0;
+  }
+  .icon {
+    i {
+      @extend .md-48;
+      width: 50px;
+      height: 50px;
+      padding: 1.5px;
+      &:hover {
+        border-radius: 100%;
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+    button {
+      & :hover {
+        background-color: black;
+      }
+      background: rgba(243, 239, 239, 0);
+      border-style: none;
+
+    }
+    position: absolute;
+
+    top: 5px;
+
+  }
+}
+
+.page-content {
+  padding: 20px;
+
+}
+.mdl-layout__content{
+  background: url("../images/linen.png");
+}
