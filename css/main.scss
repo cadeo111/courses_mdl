@@ -1,5 +1,22 @@
 @import "material";
 
+$blue: #00467f;
+$gold: #eeb111;
+
+$orange: #f88024;
+$light-orange: rgba(248, 128, 36, .95);
+
+$green: #b2bb1e;
+$grey: #abba6b;
+$teal: #00a2c5;
+$purple: #7473a9;
+$brown: #b2700e;
+$light-blue: #8fc3ea;
+$yellow: #ffe512;
+
+$pink: #c6093b;
+$light-pink: rgba(198, 9, 59, .95);
+
 .material-icons.md-18 {
   font-size: 18px;
 }
@@ -53,10 +70,15 @@ div.box {
 
 }
 
+.mdl-layout__header {
+  background-color: $blue;
+}
+
 div.banner {
   min-height: 50px;
+  display: block !important;
   @extend .mdl-layout__header;
-  background: #d84a51;
+  background-color: white;
   a {
     text-decoration: none;
     color: white;
@@ -67,11 +89,31 @@ div.banner {
     justify-content: center;
     align-items: center;
 
-    & * {
-      color: white
+    &.lit {
+      background: $light-pink;
+      color: white;
+      &:hover {
+        background: $pink
+      }
     }
-    &:hover {
-      background: rgb(255, 82, 93);
+    &.pe {
+      background: $light-orange;
+      color: white;
+      &:hover {
+        background: $orange;
+      }
+    }
+    &.two {
+      @media (min-width: 750px) {
+        width: 50%;
+        float: right;
+      }
+    }
+    &.three {
+      @media (min-width: 750px) {
+        width: 33.33%;
+        float: right;
+      }
     }
   }
 }
@@ -92,14 +134,15 @@ dialog.desc {
   margin-bottom: 10px;
   padding-top: 50px;
   width: 275px;
-  & :focus{
+  & :focus {
     outline: none;
-  };
+  }
+
   .mdl-card__actions {
     position: absolute;
     bottom: 0;
   }
-  .mdl-chip__contact{
+  .mdl-chip__contact {
     margin: 0;
   }
   .extended {
@@ -138,6 +181,7 @@ dialog.desc {
   padding: 20px;
 
 }
-.mdl-layout__content{
+
+.mdl-layout__content {
   background: url("../images/linen.png");
 }

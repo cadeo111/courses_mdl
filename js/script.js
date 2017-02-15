@@ -2,6 +2,10 @@
  * Created by cadenkeese on 2/9/17.
  */
 
+function escChar(string){
+     return string.substr(0,1) + string.substr(1).replace(/\.|#/,'');
+}
+
 let dummyString = `Pickles can be mashed up with salted chicken breasts, also try jumbleing the paste with gold
             tequila.
                 Mix each side of the onion with two and a half teaspoons of zucchini. Flavor half a kilo of walnut
@@ -46,7 +50,7 @@ $(function () {
 
 
     function listComponent(name, on, toAppend) {
-        let nameMod = name.substr(0, 3);
+        let nameMod = escChar(name.substr(0, 3));
         $(toAppend).append(
             $('<div>').addClass(`s-${nameMod} mdl-radio_container`).html(
                 `
@@ -61,7 +65,7 @@ $(function () {
 
 
     function makeHtml(title, content, toAppend) {
-        let div = $('<div>').addClass('ci-' + title.substr(0, 3)).html(`<h4 class="mdl-dialog__title">${title} @ EPS</h4>
+        let div = $('<div>').addClass('ci-' + escChar(title.substr(0, 3))).addClass('ci').html(`<h4 class="mdl-dialog__title">${title} @ EPS</h4>
         <div class="mdl-dialog__content">
             <p>
            ${content}
@@ -93,11 +97,12 @@ $(function () {
     let subDialog = document.getElementById('subjectDialog');
 
     $('.show-sub-dialog').click(function () {
-        $(".ci-" + $(this).data('subject').substr(0, 3)).show();
+        $(".ci-" + escChar($(this).data('subject').substr(0, 3))).show();
         subDialog.showModal();
     });
     $('.close-sub-dialog').click(function () {
         subDialog.close();
+        $('.ci').hide();
     });
 
     let classDialog = document.getElementById('classDialog');

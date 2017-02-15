@@ -6098,9 +6098,13 @@ div.mdl-radio_container {
   margin: 0 auto;
   padding: 5px 20px; }
 
+.mdl-layout__header, div.banner {
+  background-color: #00467f; }
+
 div.banner {
   min-height: 50px;
-  background: #d84a51; }
+  display: block !important;
+  background-color: white; }
   div.banner a {
     text-decoration: none;
     color: white;
@@ -6110,10 +6114,24 @@ div.banner {
     text-align: center;
     justify-content: center;
     align-items: center; }
-    div.banner a * {
+    div.banner a.lit {
+      background: rgba(198, 9, 59, 0.95);
       color: white; }
-    div.banner a:hover {
-      background: #ff525d; }
+      div.banner a.lit:hover {
+        background: #c6093b; }
+    div.banner a.pe {
+      background: rgba(248, 128, 36, 0.95);
+      color: white; }
+      div.banner a.pe:hover {
+        background: #f88024; }
+    @media (min-width: 750px) {
+      div.banner a.two {
+        width: 50%;
+        float: right; } }
+    @media (min-width: 750px) {
+      div.banner a.three {
+        width: 33.33%;
+        float: right; } }
 
 dialog.desc {
   width: 60vw;
