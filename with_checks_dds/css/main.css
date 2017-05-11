@@ -6061,6 +6061,45 @@ iframe.heightSet {
 .demo-wrapper iframe {
   border: 1px solid rgba(0, 0, 0, 0.5); }
 
+.dropdown > a {
+  background-color: #888888;
+  padding: 16px 2px 16px 30px !important;
+  color: lightgrey !important; }
+
+.ddactivate {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  margin: 0;
+  display: block;
+  padding: 16px 40px 10px 40px;
+  color: #757575; }
+
+.dropdown > a:hover {
+  color: #757575 !important; }
+
+div.box-margin {
+  padding: 10px 0 10px 65px !important; }
+
+hr {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important; }
+  hr.no-pad {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important; }
+
+.mdl-layout__header, div.banner {
+  background-color: #00467f; }
+
+nav.mdl-navigation {
+  padding-top: 0 !important; }
+
+.iconsDD {
+  float: right; }
+
+.selected {
+  background-color: #e0e0e0; }
+
 .material-icons.md-18 {
   font-size: 18px; }
 
@@ -6097,9 +6136,6 @@ div.mdl-slider_title {
 div.mdl-radio_container {
   margin: 0 auto;
   padding: 5px 20px; }
-
-.mdl-layout__header, div.banner {
-  background-color: #00467f; }
 
 div.banner {
   min-height: 50px;
