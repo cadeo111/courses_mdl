@@ -28,15 +28,31 @@
             <span class="mdl-layout-title">English Info</span>
         </a>
         <a class="mdl-layout__header-row show-sub-dialog pe two" data-subject="P.E" href="#">
-            <span class="mdl-layout-title">P.E. Info</span>
+                <span class="mdl-layout-title">P.E. Info</span>
         </a>
     </div>
     <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Options</span>
-        <hr style="margin-top: 0 !important;">
-        <nav class="mdl-navigation ">
-            <div class="dds">
+        <hr>
+        <nav class="mdl-navigation">
+
+            <div class="box sliders">
+                <div class="mdl-slider_title trimesters">
+                    <h5 class="title">
+                        All Lengths
+                    </h5>
+                </div>
+                <input class="mdl-slider mdl-js-slider trimesters" type="range"
+                       min="0" max="3" value="0" tabindex="0">
+                <div class="mdl-slider_title grade-level">
+                    <h5 class="title">
+                        5<sup>th</sup>-12<sup>th</sup>
+                    </h5>
+                </div>
+                <input class="mdl-slider mdl-js-slider grade-level" type="range"
+                       min="0" max="2" value="0" tabindex="0">
             </div>
+            <br>
             <hr>
             <div class="box selectors list">
             </div>

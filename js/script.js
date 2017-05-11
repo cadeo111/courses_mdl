@@ -2,8 +2,8 @@
  * Created by cadenkeese on 2/9/17.
  */
 
-function escChar(string) {
-    return string.substr(0, 1) + string.substr(1).replace(/\.|#/, '');
+function escChar(string){
+     return string.substr(0,1) + string.substr(1).replace(/\.|#/,'');
 }
 
 let dummyString = `Pickles can be mashed up with salted chicken breasts, also try jumbleing the paste with gold
@@ -47,63 +47,6 @@ let subjects = ['All', 'English', 'History/Social Sci.', 'Math', 'Science', 'Spa
 let subjectInfo = ['', englishText, dummyString, dummyString, dummyString, dummyString, dummyString, dummyString, dummyString, dummyString, dummyString,]
 
 $(function () {
-    console.log('sflkdjg;dkfg');
-    function createListOfChecks(loc, arr, name) {
-        // componentHandler.upgradeElement(document.getElementById(nameMod));
-        let randDDId = Math.round(Math.random() * 1000);
-        let toAppend = [];
-        toAppend.push(`
-            <a id="i${randDDId}" href="#" class="ddactivate" data-dd="${randDDId}" data-open="false">
-                ${name[0].toUpperCase() + name.substr(1).toLowerCase()}
-                <span class="iconsDD">
-                    <i class="ddi up material-icons">keyboard_arrow_right</i>
-                    <i class="ddi down material-icons">keyboard_arrow_down</i>
-                </span>
-            </a>
-            <div class="dropdown c${randDDId}">
-`);
-        console.log(toAppend);
-        arr.forEach((val, ind, arr) => {
-            let randCheckId = Math.round(Math.random() * 1000);
-            let s =
-                `
-                    <div class="box-margin">
-                        <label class="cbox mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-${randCheckId}">
-                            <input type="checkbox" id="checkbox-${randCheckId}" class="mdl-checkbox__input" checked>
-                            <span class="mdl-checkbox__label">${val}</span>
-                        </label>
-                    </div>
-`
-            toAppend.push(s);
-        })
-        //console.log(toAppend);
-        $(loc).html($(loc).html() + toAppend.join(""))
-    }
-    createListOfChecks('.dds', gradeArray, "Grade Level");
-    $('.dds').html($('.dds').html() + "<hr>");
-    createListOfChecks('.dds', triArray, "Course Length");
-    createListOfChecks('div.list', subjects,"Subjects");
-    $('div.list').html($('div.list').html() + "<hr>");
-    $('i.down').hide();
-    $('.dropdown').hide();
-    $('.ddactivate').click(function () {
-        // $('.ddactivate').each((i)=>{
-        //     $(this[i]).toggleClass('selected');
-        //     $('.c' + $(this[i]).data('dd')).slideToggle();
-        //     $('#i' + $(this[i]).data('dd') + ' i.up').toggle();
-        //     $('#i' + $(this[i]).data('dd') + ' i.down').toggle();
-        // })
-        $(this).toggleClass('selected');
-        $('.c' + $(this).data('dd')).slideToggle();
-        console.log('first', $(this).data('open'));
-        console.log('first2', $(this).data('open'));
-        $('#i' + $(this).data('dd') + ' i.up').toggle();
-        $('#i' + $(this).data('dd') + ' i.down').toggle();
-
-    });
-
-
-
 
 
     function listComponent(name, on, toAppend) {
@@ -138,25 +81,18 @@ $(function () {
     }
 
 
-    // for (let i = 0; i < subjects.length; i++) {
-    //     (listComponent(subjects[i], (i === 1), 'div.list'));
-    // }
+    for (let i = 0; i < subjects.length; i++) {
+        (listComponent(subjects[i], (i === 1), 'div.list'));
+    }
 
 
-    gradeArray.forEach((el, ind, arr) => {
-        $('.trimesters').append(
-            `
-`
-        )
+    $('input.grade-level').html(gradeArray[0]).on("change mousemove", function () {
+        $('div.grade-level .title').html(gradeArray[$(this).val()]);
     });
 
-    // $('input.grade-level').html(gradeArray[0]).on("change mousemove", function () {
-    //     $('div.grade-level .title').html(gradeArray[$(this).val()]);
-    // });
-
-    // $('input.trimesters').html(triArray[0]).on("change mousemove", function () {
-    //     $('div.trimesters .title').html(triArray[$(this).val()]);
-    // });
+    $('input.trimesters').html(triArray[0]).on("change mousemove", function () {
+        $('div.trimesters .title').html(triArray[$(this).val()]);
+    });
 
     let subDialog = document.getElementById('subjectDialog');
 
