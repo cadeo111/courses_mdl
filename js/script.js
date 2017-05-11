@@ -87,12 +87,12 @@ $(function () {
     $('i.down').hide();
     $('.dropdown').hide();
     $('.ddactivate').click(function () {
-        $('.ddactivate').each((i)=>{
-            $(this[i]).toggleClass('selected');
-            $('.c' + $(this[i]).data('dd')).slideToggle();
-            $('#i' + $(this[i]).data('dd') + ' i.up').toggle();
-            $('#i' + $(this[i]).data('dd') + ' i.down').toggle();
-        })
+        // $('.ddactivate').each((i)=>{
+        //     $(this[i]).toggleClass('selected');
+        //     $('.c' + $(this[i]).data('dd')).slideToggle();
+        //     $('#i' + $(this[i]).data('dd') + ' i.up').toggle();
+        //     $('#i' + $(this[i]).data('dd') + ' i.down').toggle();
+        // })
         $(this).toggleClass('selected');
         $('.c' + $(this).data('dd')).slideToggle();
         console.log('first', $(this).data('open'));
